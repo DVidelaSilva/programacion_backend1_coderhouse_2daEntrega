@@ -1,0 +1,46 @@
+[
+	{
+		"id": 1,
+		"title": "Macbook pro",
+		"description": "notebook marca apple ACTUALIZACION",
+		"code": "0001",
+		"price": 4000,
+		"status": true,
+		"stock": 100,
+		"category": "computacion",
+		"thumbnails": "bbbbbbbbbbbbbbb"
+	},
+	{
+		"id": 2,
+		"title": "Imac",
+		"description": "Desktop marca apple ACTUALIZACION",
+		"code": "0002",
+		"price": 3000,
+		"status": true,
+		"stock": 100,
+		"category": "computacion",
+		"thumbnails": ""
+	},
+	{
+		"id": 3,
+		"title": "Mac Mini",
+		"description": "Station marca apple",
+		"code": "0003",
+		"price": 1500,
+		"status": false,
+		"stock": 100,
+		"category": "computacion",
+		"thumbnails": "aaaaaaaaaaaaaaaa"
+	},
+	{
+		"id": 4,
+		"title": "Power Mac",
+		"description": "Super Station marca apple ACTUALIZACION",
+		"code": "0004",
+		"price": 6000,
+		"status": true,
+		"stock": 100,
+		"category": "computacion",
+		"thumbnails": "aaaaaaaaaaaaaaaa"
+	}
+]

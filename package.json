@@ -1,0 +1,20 @@
+{
+  "name": "programacion_backend1_coderhouse_1eraentrega",
+  "version": "1.0.0",
+  "description": "Primera entrega curso programacion backend 1 - Coderhouse",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon clear src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-handlebars": "^8.0.1"
+  }
+}
