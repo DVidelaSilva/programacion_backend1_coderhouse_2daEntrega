@@ -1,46 +1,114 @@
 [
 	{
 		"id": 1,
-		"title": "Macbook pro",
-		"description": "notebook marca apple ACTUALIZACION",
-		"code": "0001",
-		"price": 4000,
-		"status": true,
-		"stock": 100,
-		"category": "computacion",
-		"thumbnails": "bbbbbbbbbbbbbbb"
-	},
-	{
-		"id": 2,
-		"title": "Imac",
-		"description": "Desktop marca apple ACTUALIZACION",
-		"code": "0002",
-		"price": 3000,
+		"title": "ipad",
+		"description": "tablet marca apple",
+		"code": "0005",
+		"price": 500,
 		"status": true,
 		"stock": 100,
 		"category": "computacion",
 		"thumbnails": ""
 	},
 	{
-		"id": 3,
-		"title": "Mac Mini",
-		"description": "Station marca apple",
-		"code": "0003",
-		"price": 1500,
-		"status": false,
-		"stock": 100,
-		"category": "computacion",
-		"thumbnails": "aaaaaaaaaaaaaaaa"
+		"id": 2,
+		"title": "pera",
+		"description": "fruta"
 	},
 	{
-		"id": 4,
-		"title": "Power Mac",
-		"description": "Super Station marca apple ACTUALIZACION",
-		"code": "0004",
-		"price": 6000,
+		"id": 3,
+		"title": "ipad",
+		"description": "tablet marca apple",
+		"code": "0005",
+		"price": 500,
 		"status": true,
 		"stock": 100,
 		"category": "computacion",
-		"thumbnails": "aaaaaaaaaaaaaaaa"
+		"thumbnails": ""
+	},
+	{
+		"id": 4,
+		"title": "manzana",
+		"description": "fruta"
+	},
+	{
+		"id": 5,
+		"title": "cebolla",
+		"description": "verdura"
+	},
+	{
+		"id": 6,
+		"title": "ajo",
+		"description": "verdura"
+	},
+	{
+		"id": 7,
+		"title": "pera",
+		"description": "fruta"
+	},
+	{
+		"id": 8,
+		"title": "ajo",
+		"description": "verdura"
+	},
+	{
+		"id": 9,
+		"title": "palta",
+		"description": "verdura"
+	},
+	{
+		"id": 10,
+		"title": "tomate",
+		"description": "verdura"
+	},
+	{
+		"id": 11,
+		"title": "platano",
+		"description": "fruta"
+	},
+	{
+		"id": 12,
+		"title": "ajo",
+		"description": "verdura"
+	},
+	{
+		"id": 13,
+		"title": "frutilla",
+		"description": "fruta"
+	},
+	{
+		"id": 14,
+		"title": "platano",
+		"description": "fruta"
+	},
+	{
+		"id": 15,
+		"title": "pera",
+		"description": "fruta"
+	},
+	{
+		"id": 16,
+		"title": "tomate",
+		"description": "verdura"
+	},
+	{
+		"id": 17,
+		"title": "pera",
+		"description": "fruta"
+	},
+	{
+		"id": 18,
+		"title": "palta",
+		"description": "verdura"
+	},
+	{
+		"id": 19,
+		"title": "tomate",
+		"description": "verdura"
+	},
+	{
+		"id": 20,
+		"title": "ajo",
+		"description": "verdura"
 	}
 ]

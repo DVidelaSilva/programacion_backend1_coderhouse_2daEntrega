@@ -1,0 +1,41 @@
+<h1>Bienvenidos al Chat</h1>
+
+<div>
+    <input type="text" id="titleBox" name="titleBox" placeholder="Escribe un título..."/>
+    <input type="text" id="descriptionBox" name="descriptionBox" placeholder="Escribe una Descripcion..."/>
+    
+    <button id="saveButton">Guardar</button> <!-- Botón para enviar el mensaje -->
+</div>
+<div
+    id="messageLogs">
+    
+</div>
+<div>
+    <h1>Productos</h1>
+    <ul>
+        {{#each products}}
+            <li>
+                <p>Title: {{this.title}}</p>
+                <p>Descripcion: {{this.description}}</p>
+                <p>Price: {{this.price}}</p>
+                <p>message: {{this.message}}</p>
+            </li>
+        {{/each}}
+    </ul>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="assets/js/realTimeProducts.js"></script>
+
+{{!-- 
+            id: newProduct.id,
+                title: newProduct.title,
+                description: newProduct.description,
+                code: newProduct.code,
+                price: newProduct.price,
+                status: newProduct.status,
+                stock: newProduct.stock,
+                category: newProduct.category,
+                thumbnails: newProduct.thumbnails --}}
