@@ -22,17 +22,21 @@ class RealTimeProducts {
         return [] 
     };
 
-    // POST Crear Productos en FS
+    // Crear Productos en FS
     createProducts = async newProduct => {
         try{
             const products = await this.readProducts()
-            //console.log('este es el newproduct', newProduct);
-            //Estructura del Registro
+
             const productToSave = {
                 id: newProduct.id,
                 title: newProduct.title,
-                description: newProduct.description
-
+                description: newProduct.description,
+                code: newProduct.code,
+                price: newProduct.price,
+                status: newProduct.status,
+                stock: newProduct.stock,
+                category: newProduct.category,
+                thumbnails: newProduct.thumbnails
             }
 
             // ID autoincremental
@@ -41,8 +45,6 @@ class RealTimeProducts {
             } else {
                 productToSave.id = products[products.length - 1].id + 1
             }
-
-
             products.push(productToSave)
 
             await fs.promises.writeFile(path, JSON.stringify(products, null, '\t'))
@@ -54,24 +56,21 @@ class RealTimeProducts {
         }
     };
 
-        // GET Obtener Productos
-        getProducts = async () => {
-            try{
-                const products = await this.readProducts()
-    
-                //Valida si existen productos en FS
-                if (products.length === 0) {
-                    throw new Error ('No existen Productos en File System')
-                }
-                return products
-            } catch(error) {
-                console.log(error)
-                throw error
+    // Obtener Productos desde el FS
+    getProducts = async () => {
+        try{
+            const products = await this.readProducts()
+
+            //Valida si existen productos en FS
+            if (products.length === 0) {
+                throw new Error ('No existen Productos en File System')
             }
-        };
-
-
-
+            return products
+        } catch(error) {
+            console.log(error)
+            throw error
+        }
+    };
 };
 
 module.exports = RealTimeProducts

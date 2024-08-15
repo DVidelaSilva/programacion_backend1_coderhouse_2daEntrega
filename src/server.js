@@ -13,7 +13,7 @@ const realTimeProducts = new RealTimeProducts()
 const app = express()
 const PORT = 8080
 
-
+// Middlewares
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static(__dirname + '/public'))
@@ -29,10 +29,7 @@ app.use('/', viewsRouter)
 app.use('/api/products', productRouter)
 app.use('/api/carts', cartRouter)
 
-
-
-
-
+// Http Server Listen
 const httpServer = app.listen(PORT, () => {console.log('escuchando en el puerto: ', PORT)})
 
 // Socket
@@ -43,17 +40,11 @@ io.on('connection', socket => {
 
     socket.on('message', async data => {
         console.log('Mensaje Recibido', data);
-        //messages.push({ message: data });
         messages.push(data);
-        const response =  await realTimeProducts.createProducts(data)
-        //console.log(messages);
-        //console.log(response);
-        
-
+        const crearProducts =  await realTimeProducts.createProducts(data)
         const products = await realTimeProducts.getProducts()
         io.emit('messageLogs', {messages, products})
-        //io.emit('ProductsLogs', )
-        console.log(products);
+
     })
 })
 

@@ -5,6 +5,8 @@ body {
 
 h1 {
     color: black;
+    font-family: Arial, sans-serif; /* Fuente común para el encabezado */
+    font-size: 24px; /* Tamaño del texto del encabezado */
 }
 
 .card {
@@ -12,18 +14,25 @@ h1 {
     background-color: #ffffff; /* Fondo claro */
     border-radius: 8px; /* Bordes redondeados */
     margin-bottom: 20px; /* Espacio entre tarjetas */
+    font-family: Arial, sans-serif; /* Tipografía común */
+    font-size: 16px; /* Tamaño de texto común */
 }
 
 .card-header {
     background-color: #f6a700; /* Fondo azul para el encabezado */
     color: black; /* Color del texto del encabezado */
+    font-family: Arial, sans-serif; /* Tipografía común */
 }
 
 .card-body {
     background-color: #ffffff; /* Fondo blanco para el cuerpo */
+    font-family: Arial, sans-serif; /* Fuente común para el cuerpo */
+    font-size: 16px; /* Tamaño de texto común */
 }
 
 .list-group-item {
     
     border: 1px solid #007bff; /* Marco azul para los elementos de la lista */
+    font-family: Arial, sans-serif; /* Fuente común para los elementos de la lista */
+    font-size: 16px; /* Tamaño de texto común */
 }

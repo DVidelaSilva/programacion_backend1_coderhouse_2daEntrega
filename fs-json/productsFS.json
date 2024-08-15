@@ -5,29 +5,20 @@
 		"description": "tablet marca apple",
 		"code": "0005",
 		"price": 500,
-		"status": true,
+		"status": false,
 		"stock": 100,
 		"category": "computacion",
 		"thumbnails": ""
 	},
 	{
 		"id": 2,
-		"title": "peras",
-		"description": "fruta"
-	},
-	{
-		"id": 3,
-		"title": "manzana",
-		"description": "fruta"
-	},
-	{
-		"id": 4,
-		"title": "melon",
-		"description": "fruta"
-	},
-	{
-		"id": 5,
-		"title": "soy donante",
-		"description": "si"
+		"title": "pera",
+		"description": "fruta",
+		"code": "0001",
+		"price": 100,
+		"status": true,
+		"stock": 500,
+		"category": "frutas",
+		"thumbnails": ""
 	}
 ]

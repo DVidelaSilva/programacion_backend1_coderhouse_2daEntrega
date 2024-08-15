@@ -1,62 +1,84 @@
-<h1>Bienvenidos al Chat</h1>
-
-    <div class="container mt-4">
-        <h1 class="text-center">Bienvenidos al Chat</h1>
-        
-        <!-- Tarjeta para el formulario -->
-        <div class="card mb-4">
-            <div class="card-header">
-                <h2>Agregar Producto</h2>
-            </div>
-            <div class="card-body">
-                <div class="form-group">
-                    <input type="text" id="titleBox" name="titleBox" class="form-control" placeholder="Escribe un título..." />
-                </div>
-                <div class="form-group">
-                    <input type="text" id="descriptionBox" name="descriptionBox" class="form-control" placeholder="Escribe una Descripción..." />
-                </div>
-                <button id="saveButton" class="btn btn-primary">Guardar</button> <!-- Botón para enviar el mensaje -->
-            </div>
+<!-- Titulo -->
+<div class="container mt-4">
+    <h1 class="text-center">RealTimeProducts</h1>
+    
+<!-- Tarjeta para el formulario -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2>Agregar Producto</h2>
         </div>
+        <div class="card-body"> 
+            <div class="form-group">
+                title:
+                <input type="text" id="titleBox" name="titleBox" class="form-control" placeholder="Escribe un título..." />
+            </div>
+            <div class="form-group">
+                description: 
+                <input type="text" id="descriptionBox" name="descriptionBox" class="form-control" placeholder="Escribe una Descripción..." />
+            </div>
+            <div class="form-group">
+                code: 
+                <input type="text" id="codeBox" name="codeBox" class="form-control" placeholder="Escribe un codigo..." />
+            </div>
+            <div class="form-group">
+                price:
+                <input type="text" id="priceBox" name="priceBox" class="form-control" placeholder="Escribe un precio..." />
+            </div>
+            <div class="form-group">
+                status:
+                <input type="text" id="statusBox" name="statusBox" class="form-control" placeholder="Escribe un status..." />
+            </div>
+            <div class="form-group">
+                stock: 
+                <input type="text" id="stockBox" name="stockBox" class="form-control" placeholder="Escribe un stock..." />
+            </div>
+            <div class="form-group">
+                category:
+                <input type="text" id="categoryBox" name="categoryBox" class="form-control" placeholder="Escribe una categoria..." />
+            </div>
+            <div class="form-group">
+                thumbnails:
+                <input type="text" id="thumbnailsBox" name="thumbnailsBox" class="form-control" placeholder="Escribe un thumbnails..." />
+            </div>
+            
+            <button id="saveButton" class="btn btn-primary">Guardar</button> <!-- Botón para enviar el mensaje -->
+        </div>
+    </div>
 
 <div
     id="messageLogs">
-    
 </div>
-         <!-- Tarjeta para la lista de productos -->
-        <div class="card">
-            <div class="card-header">
-                <h2>Lista de Productos</h2>
-            </div>
-            <div class="card-body">
-                <div id="productList" class="row"> <!-- Contenedor para las tarjetas de productos -->
-                    {{#each products}}
-                        <div class="col-md-4"> <!-- Cada producto en una columna -->
-                            <div class="card mb-3"> <!-- Tarjeta para cada producto -->
-                                <div class="card-body">
-                                    <h5 class="card-title">Título: {{this.title}}</h5>
-                                    <p class="card-text">Descripción: {{this.description}}</p>
-                                </div>
+
+<!-- Tarjeta para la lista de productos -->
+    <div class="card">
+        <div class="card-header">
+            <h2>Listado de Productos</h2>
+        </div>
+        <div class="card-body">
+            <div id="productList" class="row"> <!-- Contenedor para las tarjetas de productos -->
+                {{#each products}}
+                    <div class="col-md-4"> <!-- Cada producto en una columna -->
+                        <div class="card mb-3"> <!-- Tarjeta para cada producto -->
+                            <div class="card-body">
+                                <p class="card-text">id: {{this.id}}</p>
+                                <p class="card-text">title: {{this.title}}</p>
+                                <p class="card-text">descripcion: {{this.description}}</p>
+                                <p class="card-text">code: {{this.code}}</p>
+                                <p class="card-text">price: {{this.price}}</p>
+                                <p class="card-text">status: {{this.status}}</p>
+                                <p class="card-text">category: {{this.category}}</p>
+                                <p class="card-text">thumbnails: {{this.thumbnails}}</p>
                             </div>
                         </div>
-                    {{/each}}
-                </div>
+                    </div>
+                {{/each}}
             </div>
         </div>
     </div>
+</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="/socket.io/socket.io.js"></script>
-<script src="assets/js/realTimeProducts.js"></script>
+<script src="assets/js/realTimeProducts.js" defer></script>
 
-{{!-- 
-            id: newProduct.id,
-                title: newProduct.title,
-                description: newProduct.description,
-                code: newProduct.code,
-                price: newProduct.price,
-                status: newProduct.status,
-                stock: newProduct.stock,
-                category: newProduct.category,
-                thumbnails: newProduct.thumbnails --}}
