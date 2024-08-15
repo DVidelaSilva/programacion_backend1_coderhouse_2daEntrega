@@ -1,24 +1,46 @@
 [
 	{
 		"id": 1,
-		"title": "ipad",
-		"description": "tablet marca apple",
-		"code": "0005",
-		"price": 500,
-		"status": false,
+		"title": "Macbook pro",
+		"description": "notebook marca apple",
+		"code": "0001",
+		"price": 1000000,
+		"status": true,
 		"stock": 100,
 		"category": "computacion",
 		"thumbnails": ""
 	},
 	{
 		"id": 2,
-		"title": "pera",
-		"description": "fruta",
-		"code": "0001",
-		"price": 100,
+		"title": "iphone",
+		"description": "ACTUALIZACION",
+		"code": "0002",
+		"price": 800000,
+		"status": false,
+		"stock": 100,
+		"category": "celulares",
+		"thumbnails": "sasasasasasasasasasa"
+	},
+	{
+		"id": 3,
+		"title": "ipad",
+		"description": "tablet marca apple",
+		"code": "0003",
+		"price": 750000,
 		"status": true,
-		"stock": 500,
-		"category": "frutas",
+		"stock": 100,
+		"category": "computacion",
+		"thumbnails": ""
+	},
+	{
+		"id": 4,
+		"title": "Mac Mini",
+		"description": "desktop marca apple",
+		"code": "0005",
+		"price": 600000,
+		"status": false,
+		"stock": 100,
+		"category": "computacion",
 		"thumbnails": ""
 	}
 ]

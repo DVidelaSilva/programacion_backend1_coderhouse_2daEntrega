@@ -27,9 +27,6 @@ saveButton.addEventListener('click', () => {
     let category = categoryBox.value.trim()
     let thumbnails = thumbnailsBox.value.trim()
 
-    console.log(price);
-
-
     // Validaciones Campos requeridos y validacion de tipo de datos
     if (!title || typeof title !== 'string') {
       throw new Error('El campo title no fue ingresado, o no es un texto')}
@@ -109,9 +106,9 @@ socket.on('messageLogs', data => {
   let products = '';
 
   // Procesar los mensajes
-  data.messages.forEach(message => {
+/*   data.messages.forEach(message => {
       messages += `Título: ${message.title}, Descripción: ${message.description}<br>`;
-  });
+  }); */
 
   // Añadir los productos
   const reversedProducts = data.products.slice().reverse(); 

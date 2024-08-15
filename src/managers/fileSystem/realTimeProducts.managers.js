@@ -60,11 +60,6 @@ class RealTimeProducts {
     getProducts = async () => {
         try{
             const products = await this.readProducts()
-
-            //Valida si existen productos en FS
-            if (products.length === 0) {
-                throw new Error ('No existen Productos en File System')
-            }
             return products
         } catch(error) {
             console.log(error)
