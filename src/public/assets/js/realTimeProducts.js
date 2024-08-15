@@ -2,6 +2,7 @@ console.log('Ejecutando realTimeProducts.js');
 
 const socket = io()
 
+// Creacion
 let titleBox = document.querySelector('#titleBox')
 let descriptionBox = document.querySelector('#descriptionBox');
 let codeBox = document.querySelector('#codeBox');
@@ -10,8 +11,11 @@ let statusBox = document.querySelector('#statusBox');
 let stockBox = document.querySelector('#stockBox');
 let categoryBox = document.querySelector('#categoryBox');
 let thumbnailsBox = document.querySelector('#thumbnailsBox');
-
 let saveButton = document.querySelector('#saveButton');
+
+// Eliminacion
+let deleteIdBox = document.querySelector('#deleteIdBox');
+let deleteButton = document.querySelector('#deleteButton');
 
 
 // Guardar Producto mediante boton guardar
@@ -105,11 +109,6 @@ socket.on('messageLogs', data => {
   let messages = '';
   let products = '';
 
-  // Procesar los mensajes
-/*   data.messages.forEach(message => {
-      messages += `Título: ${message.title}, Descripción: ${message.description}<br>`;
-  }); */
-
   // Añadir los productos
   const reversedProducts = data.products.slice().reverse(); 
   reversedProducts.forEach(product => {
@@ -131,4 +130,37 @@ socket.on('messageLogs', data => {
 
   log.innerHTML = messages; 
   productList.innerHTML = products; 
+});
+
+
+// Elimar productos del file system
+deleteButton.addEventListener('click', () => {
+  try {
+    // Obtener el valor del ID del formulario
+    let id = Number(deleteIdBox.value.trim())
+
+    if (isNaN(id) || id <= 0) {
+      throw new Error('El ID ingresado no es válido')
+    }
+
+    socket.emit('deleteProduct', { id })
+    deleteIdBox.value = ''
+     //SweetAlert Eliminar Exito
+    Swal.fire({
+      icon: 'success',
+      title: '¡Exito!',
+      text: 'Producto eliminado con éxito',
+      confirmButtonText: 'Aceptar',
+      allowOutsideClick: false
+    })
+  } catch (error) {
+    //SweetAlert Eliminar Error
+    Swal.fire({
+      icon: 'error',
+      title: '¡Error!',
+      text: error.message,
+      confirmButtonText: 'Aceptar',
+      allowOutsideClick: false
+    })
+  }
 });

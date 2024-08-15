@@ -38,14 +38,26 @@ let messages = []
 io.on('connection', socket => {
     console.log('Nuevo Cliente Conectado');
 
+    // Creacion de productos
     socket.on('message', async data => {
-        console.log('Mensaje Recibido', data);
-        messages.push(data);
+        console.log('Mensaje Recibido', data)
+        messages.push(data)
         const crearProducts =  await realTimeProducts.createProducts(data)
         const products = await realTimeProducts.getProducts()
         io.emit('messageLogs', {messages, products})
 
-    })
+    });
+    // Eliminación de productos
+    socket.on('deleteProduct', async (data) => {
+      try {
+        await realTimeProducts.deleteProducts(data.id)
+        const products = await realTimeProducts.getProducts()
+        io.emit('messageLogs', { products })
+      } catch (error) {
+        console.error('Error al eliminar producto:', error)
+        socket.emit('error', { message: error.message });
+      }
+  });
 })
 
 

@@ -66,6 +66,41 @@ class RealTimeProducts {
             throw error
         }
     };
+
+    // DELETE Eliminar Productos en FS
+    deleteProducts = async (id) => {
+        try{
+            const products = await this.readProducts()
+
+            // Valida que ID sea un numero y mayor a cero
+            if (isNaN(id) || Number(id) <= 0) {
+                throw new Error (`El ID '${id}' ingresado no es un ID válido`)
+            } 
+            //Valida si existen productos en FS
+            if (products.length === 0) {
+                throw new Error ('No existen Productos en File System')
+            }
+            
+            // Valida si encuentra el producto por el ID y Elimina
+            let productById = products.find(product => product.id === Number(id))
+            if(productById){
+                const indiceProducto = products.findIndex(product => product.id === Number(id))
+    
+                if (indiceProducto === -1) {
+                    throw new Error('Product not found')
+                }
+    
+                products.splice(indiceProducto, 1)
+        
+                fs.writeFileSync(path, JSON.stringify(products, null, '\t'))
+            } else {
+                throw new Error (`Producto ID '${id}' NO encontrado en File System`)
+            }
+        } catch (error){
+            console.log(error)
+            throw error
+        }
+    };
 };
 
 module.exports = RealTimeProducts

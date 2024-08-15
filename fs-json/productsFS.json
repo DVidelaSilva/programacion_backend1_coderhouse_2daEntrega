@@ -1,7 +1,7 @@
 [
 	{
 		"id": 1,
-		"title": "Macbook pro",
+		"title": "MacBook Pro",
 		"description": "notebook marca apple",
 		"code": "0001",
 		"price": 1000000,
@@ -12,35 +12,13 @@
 	},
 	{
 		"id": 2,
-		"title": "iphone",
-		"description": "ACTUALIZACION",
-		"code": "0002",
-		"price": 800000,
-		"status": false,
-		"stock": 100,
-		"category": "celulares",
-		"thumbnails": "sasasasasasasasasasa"
-	},
-	{
-		"id": 3,
 		"title": "ipad",
 		"description": "tablet marca apple",
-		"code": "0003",
-		"price": 750000,
-		"status": true,
-		"stock": 100,
-		"category": "computacion",
-		"thumbnails": ""
-	},
-	{
-		"id": 4,
-		"title": "Mac Mini",
-		"description": "desktop marca apple",
-		"code": "0005",
-		"price": 600000,
+		"code": "0002",
+		"price": 650000,
 		"status": false,
 		"stock": 100,
 		"category": "computacion",
-		"thumbnails": ""
+		"thumbnails": "adsfshdjfkglh"
 	}
 ]
