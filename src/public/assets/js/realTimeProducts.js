@@ -102,10 +102,14 @@ socket.on('messageLogs', data => {
   // Procesar los productos
   const reversedProducts = data.products.slice().reverse(); 
   reversedProducts.forEach(product => {
-      products += `<li>
-          <p>Title: ${product.title}</p>
-          <p>Descripción: ${product.description}</p>
-      </li>`;
+      products += `<div class="col-md-4"> <!-- Cada producto en una columna -->
+                            <div class="card mb-3"> <!-- Tarjeta para cada producto -->
+                                <div class="card-body">
+                                    <h5 class="card-title">Título: ${product.title}</h5>
+                                    <p class="card-text">Descripción: ${product.description}</p>
+                                </div>
+                            </div>
+                        </div>`;
   });
 
   // Actualizar el HTML

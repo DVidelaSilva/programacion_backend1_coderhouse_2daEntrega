@@ -1,4 +1,29 @@
-h1 {
-    color: blue;
+body {
+    background-color: #dadee1; /* Color de fondo gris */
+
 }
 
+h1 {
+    color: black;
+}
+
+.card {
+    border: 2px solid #f6a700; /* Marco azul */
+    background-color: #ffffff; /* Fondo claro */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-bottom: 20px; /* Espacio entre tarjetas */
+}
+
+.card-header {
+    background-color: #f6a700; /* Fondo azul para el encabezado */
+    color: black; /* Color del texto del encabezado */
+}
+
+.card-body {
+    background-color: #ffffff; /* Fondo blanco para el cuerpo */
+}
+
+.list-group-item {
+    
+    border: 1px solid #007bff; /* Marco azul para los elementos de la lista */
+}

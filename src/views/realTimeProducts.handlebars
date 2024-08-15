@@ -1,26 +1,49 @@
 <h1>Bienvenidos al Chat</h1>
 
-<div>
-    <input type="text" id="titleBox" name="titleBox" placeholder="Escribe un título..."/>
-    <input type="text" id="descriptionBox" name="descriptionBox" placeholder="Escribe una Descripcion..."/>
-    
-    <button id="saveButton">Guardar</button> <!-- Botón para enviar el mensaje -->
-</div>
+    <div class="container mt-4">
+        <h1 class="text-center">Bienvenidos al Chat</h1>
+        
+        <!-- Tarjeta para el formulario -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2>Agregar Producto</h2>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <input type="text" id="titleBox" name="titleBox" class="form-control" placeholder="Escribe un título..." />
+                </div>
+                <div class="form-group">
+                    <input type="text" id="descriptionBox" name="descriptionBox" class="form-control" placeholder="Escribe una Descripción..." />
+                </div>
+                <button id="saveButton" class="btn btn-primary">Guardar</button> <!-- Botón para enviar el mensaje -->
+            </div>
+        </div>
+
 <div
     id="messageLogs">
     
 </div>
-<div>
-    <h1>Productos</h1>
-    <ul id="productList"> <!-- Asegúrate de tener este ID para la lista -->
-        {{#each products}}
-            <li>
-                <p>Title: {{this.title}}</p>
-                <p>Descripción: {{this.description}}</p>
-            </li>
-        {{/each}}
-    </ul>
-</div>
+         <!-- Tarjeta para la lista de productos -->
+        <div class="card">
+            <div class="card-header">
+                <h2>Lista de Productos</h2>
+            </div>
+            <div class="card-body">
+                <div id="productList" class="row"> <!-- Contenedor para las tarjetas de productos -->
+                    {{#each products}}
+                        <div class="col-md-4"> <!-- Cada producto en una columna -->
+                            <div class="card mb-3"> <!-- Tarjeta para cada producto -->
+                                <div class="card-body">
+                                    <h5 class="card-title">Título: {{this.title}}</h5>
+                                    <p class="card-text">Descripción: {{this.description}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

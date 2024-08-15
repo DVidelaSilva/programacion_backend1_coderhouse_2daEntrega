@@ -12,208 +12,22 @@
 	},
 	{
 		"id": 2,
-		"title": "pera",
+		"title": "peras",
 		"description": "fruta"
 	},
 	{
 		"id": 3,
-		"title": "ipad",
-		"description": "tablet marca apple",
-		"code": "0005",
-		"price": 500,
-		"status": true,
-		"stock": 100,
-		"category": "computacion",
-		"thumbnails": ""
+		"title": "manzana",
+		"description": "fruta"
 	},
 	{
 		"id": 4,
-		"title": "manzana",
+		"title": "melon",
 		"description": "fruta"
 	},
 	{
 		"id": 5,
-		"title": "cebolla",
-		"description": "verdura"
-	},
-	{
-		"id": 6,
-		"title": "ajo",
-		"description": "verdura"
-	},
-	{
-		"id": 7,
-		"title": "pera",
-		"description": "fruta"
-	},
-	{
-		"id": 8,
-		"title": "ajo",
-		"description": "verdura"
-	},
-	{
-		"id": 9,
-		"title": "palta",
-		"description": "verdura"
-	},
-	{
-		"id": 10,
-		"title": "tomate",
-		"description": "verdura"
-	},
-	{
-		"id": 11,
-		"title": "platano",
-		"description": "fruta"
-	},
-	{
-		"id": 12,
-		"title": "ajo",
-		"description": "verdura"
-	},
-	{
-		"id": 13,
-		"title": "frutilla",
-		"description": "fruta"
-	},
-	{
-		"id": 14,
-		"title": "platano",
-		"description": "fruta"
-	},
-	{
-		"id": 15,
-		"title": "pera",
-		"description": "fruta"
-	},
-	{
-		"id": 16,
-		"title": "tomate",
-		"description": "verdura"
-	},
-	{
-		"id": 17,
-		"title": "pera",
-		"description": "fruta"
-	},
-	{
-		"id": 18,
-		"title": "palta",
-		"description": "verdura"
-	},
-	{
-		"id": 19,
-		"title": "tomate",
-		"description": "verdura"
-	},
-	{
-		"id": 20,
-		"title": "ajo",
-		"description": "verdura"
-	},
-	{
-		"id": 21,
-		"title": "pera",
-		"description": "fruta"
-	},
-	{
-		"id": 22,
-		"title": "ajo",
-		"description": "verdura"
-	},
-	{
-		"id": 23,
-		"title": "ajo",
-		"description": "verdura"
-	},
-	{
-		"id": 24,
-		"title": "peras",
-		"description": "fruta"
-	},
-	{
-		"id": 25,
-		"title": "zapallo",
-		"description": "verdura"
-	},
-	{
-		"id": 26,
-		"title": "peras",
-		"description": "frutas"
-	},
-	{
-		"id": 27,
-		"title": "manzana",
-		"description": "fruta"
-	},
-	{
-		"id": 28,
-		"title": "manzana",
-		"description": "fruta"
-	},
-	{
-		"id": 29,
-		"title": "ajo",
-		"description": "verdura"
-	},
-	{
-		"id": 30,
-		"title": "lechuga",
-		"description": "verdura"
-	},
-	{
-		"id": 31,
-		"title": "ajo",
-		"description": "verdura"
-	},
-	{
-		"id": 32,
-		"title": "pepino",
-		"description": "verdura"
-	},
-	{
-		"id": 33,
-		"title": "ajo",
-		"description": "verdura"
-	},
-	{
-		"id": 34,
-		"title": "naranja",
-		"description": "fruta"
-	},
-	{
-		"id": 35,
-		"title": "kiwi",
-		"description": "fruta"
-	},
-	{
-		"id": 36,
-		"title": "fresa",
-		"description": "fruta"
-	},
-	{
-		"id": 37,
-		"title": "durazno",
-		"description": "fruta"
-	},
-	{
-		"id": 38,
-		"title": "damasco",
-		"description": "fruta"
-	},
-	{
-		"id": 39,
-		"title": "arandano",
-		"description": "fruta"
-	},
-	{
-		"id": 40,
-		"title": "mandarina",
-		"description": "fruta"
-	},
-	{
-		"id": 41,
-		"title": "mandarina",
-		"description": "fruta"
+		"title": "soy donante",
+		"description": "si"
 	}
 ]
