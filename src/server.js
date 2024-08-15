@@ -6,8 +6,8 @@ const productRouter = require('./routes/products.router.js')
 const cartRouter    = require('./routes/carts.router.js')
 const viewsRouter = require('./routes/views.router.js')
 
-const ChatSave = require('./managers/fileSystem/realTimeProducts.managers.js')
-const chatSave = new ChatSave()
+const RealTimeProducts = require('./managers/fileSystem/realTimeProducts.managers.js')
+const realTimeProducts = new RealTimeProducts()
 
 
 const app = express()
@@ -45,10 +45,15 @@ io.on('connection', socket => {
         console.log('Mensaje Recibido', data);
         //messages.push({ message: data });
         messages.push(data);
-        const response =  await chatSave.createProducts(data)
+        const response =  await realTimeProducts.createProducts(data)
         //console.log(messages);
         //console.log(response);
-        io.emit('messageLogs', messages)
+        
+
+        const products = await realTimeProducts.getProducts()
+        io.emit('messageLogs', {messages, products})
+        //io.emit('ProductsLogs', )
+        console.log(products);
     })
 })
 

@@ -2,7 +2,7 @@ const fs    = require('fs')
 const path  = './fs-json/productsFS.json'
 
 
-class ChatSave {
+class RealTimeProducts {
 
     constructor(){
         this.path = path
@@ -43,8 +43,6 @@ class ChatSave {
             }
 
 
-     
-
             products.push(productToSave)
 
             await fs.promises.writeFile(path, JSON.stringify(products, null, '\t'))
@@ -56,10 +54,24 @@ class ChatSave {
         }
     };
 
-
+        // GET Obtener Productos
+        getProducts = async () => {
+            try{
+                const products = await this.readProducts()
+    
+                //Valida si existen productos en FS
+                if (products.length === 0) {
+                    throw new Error ('No existen Productos en File System')
+                }
+                return products
+            } catch(error) {
+                console.log(error)
+                throw error
+            }
+        };
 
 
 
 };
 
-module.exports = ChatSave
+module.exports = RealTimeProducts

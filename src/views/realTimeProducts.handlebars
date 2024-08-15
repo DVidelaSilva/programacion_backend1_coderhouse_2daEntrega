@@ -12,13 +12,11 @@
 </div>
 <div>
     <h1>Productos</h1>
-    <ul>
+    <ul id="productList"> <!-- Asegúrate de tener este ID para la lista -->
         {{#each products}}
             <li>
                 <p>Title: {{this.title}}</p>
-                <p>Descripcion: {{this.description}}</p>
-                <p>Price: {{this.price}}</p>
-                <p>message: {{this.message}}</p>
+                <p>Descripción: {{this.description}}</p>
             </li>
         {{/each}}
     </ul>

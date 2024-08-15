@@ -7,13 +7,17 @@ const ProductsManagerFs = require('../managers/fileSystem/products.managers')
 const productsManagerFS = new ProductsManagerFs()
 
 
+
+
 router.use('/realtimeproducts', async (req, res) => {
 
-    res.render('realTimeProducts', { 
-        isMenu: true
-    })
 
-/*     try{
+
+/*     res.render('realTimeProducts',  { 
+        //isMenu: true
+    }) */
+
+    try{
         // Implementar limitacion en busqueda
 
         const productsFS = await productsManagerFS.getProducts()
@@ -29,20 +33,22 @@ router.use('/realtimeproducts', async (req, res) => {
                 description: product.description // Cambia esto según los campos que tenga tu producto
             }));
 
+            const reversedProducts = productDetails.reverse();
+
             const testUser = {
-                products: productDetails // Usamos los detalles mapeados
+                products: reversedProducts // Usamos los detalles mapeados
             };
 
         //const productTitle =
 
             // Renderizamos la vista con los datos
-            res.render('chat', testUser);
+            res.render('realTimeProducts', testUser);
         } else {
-            res.render('chat', { products: [] }); // Manejar el caso donde no hay productos
+            res.render('realTimeProducts', { products: [] }); // Manejar el caso donde no hay productos
         }
     } catch (error){
         res.status(400).send({ status: 'error', message: error.message })
-    } */
+    }
 })
 
 

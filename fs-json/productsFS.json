@@ -110,5 +110,110 @@
 		"id": 20,
 		"title": "ajo",
 		"description": "verdura"
+	},
+	{
+		"id": 21,
+		"title": "pera",
+		"description": "fruta"
+	},
+	{
+		"id": 22,
+		"title": "ajo",
+		"description": "verdura"
+	},
+	{
+		"id": 23,
+		"title": "ajo",
+		"description": "verdura"
+	},
+	{
+		"id": 24,
+		"title": "peras",
+		"description": "fruta"
+	},
+	{
+		"id": 25,
+		"title": "zapallo",
+		"description": "verdura"
+	},
+	{
+		"id": 26,
+		"title": "peras",
+		"description": "frutas"
+	},
+	{
+		"id": 27,
+		"title": "manzana",
+		"description": "fruta"
+	},
+	{
+		"id": 28,
+		"title": "manzana",
+		"description": "fruta"
+	},
+	{
+		"id": 29,
+		"title": "ajo",
+		"description": "verdura"
+	},
+	{
+		"id": 30,
+		"title": "lechuga",
+		"description": "verdura"
+	},
+	{
+		"id": 31,
+		"title": "ajo",
+		"description": "verdura"
+	},
+	{
+		"id": 32,
+		"title": "pepino",
+		"description": "verdura"
+	},
+	{
+		"id": 33,
+		"title": "ajo",
+		"description": "verdura"
+	},
+	{
+		"id": 34,
+		"title": "naranja",
+		"description": "fruta"
+	},
+	{
+		"id": 35,
+		"title": "kiwi",
+		"description": "fruta"
+	},
+	{
+		"id": 36,
+		"title": "fresa",
+		"description": "fruta"
+	},
+	{
+		"id": 37,
+		"title": "durazno",
+		"description": "fruta"
+	},
+	{
+		"id": 38,
+		"title": "damasco",
+		"description": "fruta"
+	},
+	{
+		"id": 39,
+		"title": "arandano",
+		"description": "fruta"
+	},
+	{
+		"id": 40,
+		"title": "mandarina",
+		"description": "fruta"
+	},
+	{
+		"id": 41,
+		"title": "mandarina",
+		"description": "fruta"
 	}
 ]
